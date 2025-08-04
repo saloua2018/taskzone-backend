@@ -4,8 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+# Installer Maven dans le conteneur
+RUN apt-get update && apt-get install -y maven
+
+# Compiler ton projet sans les tests
+RUN mvn clean package -DskipTests
 
 EXPOSE 8080
 

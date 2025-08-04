@@ -40,6 +40,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+        <!-- PostgreSQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version>
+        </dependency>
+
         <!-- JWT -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -55,7 +62,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- H2 Database (with version!) -->
+        <!-- H2 Database (for local dev/testing only) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -87,5 +94,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
